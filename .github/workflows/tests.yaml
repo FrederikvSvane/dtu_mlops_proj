@@ -9,7 +9,12 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }} # creates a matrix of jobs to run in parellel (required for non fail-fast)
+
+    strategy:
+      fail-fast: false # dont kill the other pipeline processes if one fails
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
     - name: Checkout
@@ -19,11 +24,14 @@ jobs:
       uses: astral-sh/setup-uv@v7
       with:
         python-version: 3.12
+        enable-cache: true # cache python packages so uv doesnt re-download on each run
 
     - name: Install dependencies
       run: |
         uv sync --dev --locked
 
-    - name: Test with pytest
+    - name: Test with pytest and coverage
       run: |
-        uv run pytest -v
+        uv run coverage run -m pytest -v
+        uv run coverage report -m --fail-under=15
+        uv run coverage xml
