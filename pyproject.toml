@@ -1,0 +1,60 @@
+[build-system]
+requires = ["uv_build>=0.9.22,<0.10.0"]
+build-backend = "uv_build"
+
+[project]
+name = "mlops_proj"
+version = "0.0.1"
+description = "A repo for the continual exercise in the course ML operations at DTU"
+authors = [{ name = "Frederik Svane", email = "your@email.com" }]
+license = { file = "LICENSE" }
+keywords = ["machine learning", "MLOps"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi==0.115.6",
+  "loguru>=0.7.3",
+  "matplotlib>=3.10.8",
+  "python-dotenv>=1.2.1",
+  "scikit-learn>=1.8.0",
+  "torch==2.6.0",
+  "torch-tb-profiler>=0.4.3",
+  "tqdm>=4.67.1",
+  "typer==0.15.1",
+  "uvicorn==0.34.0",
+  "wandb>=0.23.1",
+]
+
+[dependency-groups]
+dev = [
+  "coverage==7.6.9",
+  "invoke==2.2.0",
+  "mkdocs-material==9.4.6",
+  "mkdocs==1.6.1",
+  "pre-commit==4.1.0",
+  "pytest==8.3.4",
+  "ruff==0.5.3",
+  "mkdocstrings-python==1.12.2",
+  "snakeviz>=2.2.2",
+]
+
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]
+torchvision = [{ index = "pytorch-cpu" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.ruff]
+line-length = 120
+
+[tool.coverage.run]
+source = ["src/mlops_proj"]
+omit = ["tests/*", "/private/var/folders/*", "/tmp/*", "*/__init__.py"]

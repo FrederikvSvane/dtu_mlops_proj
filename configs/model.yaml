@@ -1,0 +1,6 @@
+#TODO use hydra to integrate these parameters into the code
+
+hyperparameters:
+  batch_size: 64
+  learning_rate: 1e-4
+  weights_init_seed: 1234

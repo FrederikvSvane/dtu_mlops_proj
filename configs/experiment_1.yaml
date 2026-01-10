@@ -1,0 +1,7 @@
+# Just a placeholder file to give an indication of how to use yaml files to 
+# control the hyperparameter setup of each experiment, to make sure they are reproducible.
+
+# So you'd fill out this yaml file with the relevant hyperparameters for the experiment,
+# use Hydra to integrate them into the code
+# then create experiment2.yaml, ... experiment_n.yaml with other experiments. 
+# And maybe write a small description in each/in the report
