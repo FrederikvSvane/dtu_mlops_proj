@@ -183,4 +183,4 @@ cython_debug/
 wandb/
 model.pth
 profiler_logs/
-profile.prof
+*.prof
