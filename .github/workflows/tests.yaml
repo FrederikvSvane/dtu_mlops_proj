@@ -7,7 +7,7 @@ on:
     branches: [ master, main ]
 
 jobs:
-  build:
+  build_test_coverage:
 
     runs-on: ${{ matrix.os }} # creates a matrix of jobs to run in parellel (required for non fail-fast)
 

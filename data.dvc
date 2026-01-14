@@ -1,6 +1,130 @@
 outs:
-- md5: 65d18b1ae4b170d2f1688c55cdffbe39.dir
-  size: 222815544
-  nfiles: 18
-  hash: md5
+- hash: md5
   path: data
+  files:
+  - relpath: processed/corruptmnist/test_images.pt
+    md5: 6da80f9bfafe68165916d504ebff2828
+    size: 15681200
+    cloud:
+      gcs_remote:
+        etag: 08c7ade88a918b92031001
+        version_id: '1768397240669895'
+  - relpath: processed/corruptmnist/test_labels.pt
+    md5: 513796901b7144c50157ddf297cbb76d
+    size: 81200
+    cloud:
+      gcs_remote:
+        etag: 08fc89bd88918b92031001
+        version_id: '1768397235766524'
+  - relpath: processed/corruptmnist/train_images.pt
+    md5: f68b1d893d4d2c1aa860efad0a573a66
+    size: 94081205
+    cloud:
+      gcs_remote:
+        etag: 08a9d98a8d918b92031001
+        version_id: '1768397245426857'
+  - relpath: processed/corruptmnist/train_labels.pt
+    md5: b3294e91afb3523ff3a940553e3312c4
+    size: 241205
+    cloud:
+      gcs_remote:
+        etag: 08f7b7b188918b92031001
+        version_id: '1768397235575799'
+  - relpath: raw/corruptmnist/test_images.pt
+    md5: dbaef582b7c62889340e79e408b1eb81
+    size: 15680759
+    cloud:
+      gcs_remote:
+        etag: 08da96d98a918b92031001
+        version_id: '1768397240421210'
+  - relpath: raw/corruptmnist/test_target.pt
+    md5: 07a46d22581416c598f8b052816e3f56
+    size: 80759
+    cloud:
+      gcs_remote:
+        etag: 08e896c488918b92031001
+        version_id: '1768397235882856'
+  - relpath: raw/corruptmnist/train_images_0.pt
+    md5: 45a5787aa4d44cc51bbc31f963513b05
+    size: 15680768
+    cloud:
+      gcs_remote:
+        etag: 089383ea8a918b92031001
+        version_id: '1768397240697235'
+  - relpath: raw/corruptmnist/train_images_1.pt
+    md5: a5c62febd0bb8c80df768b7c208a9d27
+    size: 15680768
+    cloud:
+      gcs_remote:
+        etag: 08b698c88a918b92031001
+        version_id: '1768397240142902'
+  - relpath: raw/corruptmnist/train_images_2.pt
+    md5: f20c7ad31a03213f3fa2ae2f03e3085b
+    size: 15680768
+    cloud:
+      gcs_remote:
+        etag: 08c4e8e98a918b92031001
+        version_id: '1768397240693828'
+  - relpath: raw/corruptmnist/train_images_3.pt
+    md5: c57ae96d4e686648971e65d738f0332a
+    size: 15680768
+    cloud:
+      gcs_remote:
+        etag: 08b094eb8a918b92031001
+        version_id: '1768397240715824'
+  - relpath: raw/corruptmnist/train_images_4.pt
+    md5: 6d70cc8f6423c00671c2aa64fb139d67
+    size: 15680768
+    cloud:
+      gcs_remote:
+        etag: 088bc2b98a918b92031001
+        version_id: '1768397239902475'
+  - relpath: raw/corruptmnist/train_images_5.pt
+    md5: 826e31e8e2fd6296dd1ad1d4cbbf0c55
+    size: 15680768
+    cloud:
+      gcs_remote:
+        etag: 08c79beb8a918b92031001
+        version_id: '1768397240716743'
+  - relpath: raw/corruptmnist/train_target_0.pt
+    md5: e4a6683c59059f14cef44dfec30cdc21
+    size: 480768
+    cloud:
+      gcs_remote:
+        etag: 08c6f7cb88918b92031001
+        version_id: '1768397236009926'
+  - relpath: raw/corruptmnist/train_target_1.pt
+    md5: 89b2d0ceabecbb618b05e536eade36fe
+    size: 480768
+    cloud:
+      gcs_remote:
+        etag: 08ddd8ca88918b92031001
+        version_id: '1768397235989597'
+  - relpath: raw/corruptmnist/train_target_2.pt
+    md5: b6eba9a036e61275df9d46f11acd0541
+    size: 480768
+    cloud:
+      gcs_remote:
+        etag: 08a195c988918b92031001
+        version_id: '1768397235964577'
+  - relpath: raw/corruptmnist/train_target_3.pt
+    md5: a27f99f24f43d6c653e1244b21d80de0
+    size: 480768
+    cloud:
+      gcs_remote:
+        etag: 08d6a5cb88918b92031001
+        version_id: '1768397235999446'
+  - relpath: raw/corruptmnist/train_target_4.pt
+    md5: b1b55f6a9baa7356bf87430775e37aa6
+    size: 480768
+    cloud:
+      gcs_remote:
+        etag: 088287ca88918b92031001
+        version_id: '1768397235979138'
+  - relpath: raw/corruptmnist/train_target_5.pt
+    md5: b44e2cd89f6efcbe4eb88253da30f327
+    size: 480768
+    cloud:
+      gcs_remote:
+        etag: 08d1eaca88918b92031001
+        version_id: '1768397235991889'
