@@ -7,7 +7,7 @@ on:
     branches: [ master, main ]
 
 jobs:
-  build:
+  build_test_coverage:
 
     runs-on: ${{ matrix.os }} # creates a matrix of jobs to run in parellel (required for non fail-fast)
 
@@ -29,6 +29,15 @@ jobs:
     - name: Install dependencies
       run: |
         uv sync --dev --locked
+
+    - name: Auth with GCP
+      uses: google-github-actions/auth@v2
+      with:
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+    - name: Pull data
+      run: |
+        uv run dvc pull
 
     - name: Test with pytest and coverage
       run: |

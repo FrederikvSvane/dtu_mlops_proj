@@ -180,3 +180,4 @@ wandb/
 model.pth
 profiler_logs/
 *.prof
+/data

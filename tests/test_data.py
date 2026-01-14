@@ -1,7 +1,13 @@
 import torch
-from mlops_proj.data import corrupt_mnist
+from mlops_proj.data import corrupt_mnist, normalize
 
-# from tests import _PATH_DATA
+
+def test_normalize():
+    """Normalize should produce mean ~0 and std ~1."""
+    x = torch.randn(100, 1, 28, 28) * 50 + 100  # arbitrary mean/std
+    normalized = normalize(x)
+    assert abs(normalized.mean().item()) < 0.01, "Mean should be close to 0"
+    assert abs(normalized.std().item() - 1.0) < 0.01, "Std should be close to 1"
 
 
 def test_data():

@@ -1,0 +1,5 @@
+[core]
+    remote = gcs_remote
+['remote "gcs_remote"']
+    url = gs://dtu-02476-mlops-data-bucket
+    version_aware = true
